@@ -70,3 +70,21 @@ function showInvitation(name) {
     pageInv.classList.add('active');
     pageInv.style.display = 'flex';
 }
+
+/* تابع بازگشت به صفحه اول که به فایل script اضافه شد */
+function goBackToHome() {
+    const pageHome = document.getElementById('page-home');
+    const pageInv = document.getElementById('page-invitation');
+    
+    pageInv.classList.remove('active');
+    pageInv.style.display = 'none';
+    
+    pageHome.classList.add('active');
+    pageHome.style.display = 'flex';
+    
+    // پاک کردن فیلد کد ملی و پیام خطا هنگام بازگشت
+    const inputField = document.getElementById('national-id-input');
+    const errorDiv = document.getElementById('error-message');
+    if (inputField) inputField.value = '';
+    if (errorDiv) errorDiv.innerText = '';
+}
