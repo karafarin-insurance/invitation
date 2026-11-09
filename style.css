@@ -236,17 +236,22 @@ button[type="submit"]:hover {
     display: block;
 }
 
-/* جایگاه جدید و دقیق نام روی کارت دعوت */
+/* جایگاه نام روی کارت دعوت */
 .guest-name-overlay {
     position: absolute;
     top: 44.0%; 
     right: 48%; 
     transform: translateY(-50%);
-    font-size: clamp(0.75rem, 2.1vw, 1.05rem);
+    font-size: clamp(0.7rem, 1.9vw, 0.95rem); /* سایز پیش‌فرض */
     font-weight: bold;
     color: #111111;
     white-space: nowrap;
     animation: nameGlowAppear 1.5s ease-in-out forwards;
+}
+
+/* استایل مخصوص اسامی طولانی (بیش از 20 کاراکتر شامل حروف و فاصله) */
+.guest-name-overlay.long-name {
+    font-size: clamp(0.55rem, 1.4vw, 0.72rem); /* اندازه فونت کوچک‌تر برای جلوگیری از خروج از کادر */
 }
 
 @keyframes nameGlowAppear {
@@ -267,7 +272,7 @@ button[type="submit"]:hover {
     }
 }
 
-/* ساختار دو نقشه در کنار هم با عرض دقیق دعوتنامه */
+/* ساختار دو نقشه در کنار هم */
 .maps-container-wrapper {
     display: flex;
     width: 100%;
@@ -279,7 +284,7 @@ button[type="submit"]:hover {
     flex: 1;
     display: flex;
     flex-direction: column;
-    min-width: 0; /* جلوگیری از بهم ریختگی عرض flex */
+    min-width: 0;
 }
 
 .map-title-tag {

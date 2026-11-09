@@ -60,6 +60,13 @@ function showInvitation(name) {
     
     nameOverlay.innerText = name;
     
+    // بررسی طول نام (بیشتر از 20 کاراکتر شامل حروف و فاصله)
+    if (name.length > 20) {
+        nameOverlay.classList.add("long-name");
+    } else {
+        nameOverlay.classList.remove("long-name");
+    }
+    
     pageInv.classList.add('active');
     pageInv.style.display = 'flex';
 }
