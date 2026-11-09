@@ -11,10 +11,10 @@ body, html {
     width: 100%;
     min-height: 100vh;
     overflow-x: hidden;
-    background-color: #f2efe4;
+    background-color: #FFFFFF;
 }
 
-/* تفکیک کامل صفحات */
+/* تفکیک کامل صفحات و جلوگیری از نمایش هم‌زمان */
 .page {
     display: none !important;
     width: 100%;
@@ -31,7 +31,7 @@ body, html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 15px;
     position: relative;
 }
 
@@ -48,176 +48,21 @@ body, html {
     max-width: 140px;
     width: 100%;
     height: auto;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .event-info-box {
     background-color: #E8F5E9;
-    border-radius: 16px;
-    padding: 16px 20px;
-    width: 100%;
-    margin-bottom: 20px;
-    border: 1px solid #C8E6C9;
 }
 
-.event-info-box h2 {
-    font-size: 1.1rem;
-    color: #1B5E20;
-    font-weight: 700;
-    margin-bottom: 6px;
-}
-
-.event-info-box p {
-    font-size: 0.9rem;
-    color: #2E7D32;
-    margin-bottom: 8px;
-}
-
-.event-year {
-    display: inline-block;
-    font-size: 0.85rem;
-    font-weight: bold;
-    color: #388E3C;
-    background-color: #FFFFFF;
-    padding: 3px 12px;
-    border-radius: 12px;
-}
-
-.video-wrapper {
-    width: 100%;
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-    background-color: #000;
-}
-
-.video-wrapper video {
-    width: 100%;
-    display: block;
-}
-
-.hidden-section {
-    display: none;
-    width: 100%;
-}
-
-.fade-in {
-    display: block;
-    animation: fadeIn 0.8s ease-in-out forwards;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-.instruction-text {
-    font-size: 0.9rem;
-    color: #333;
-    margin-bottom: 12px;
-}
-
-#national-id-form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: 100%;
-}
-
-#national-id-input {
-    width: 100%;
-    padding: 12px;
-    border-radius: 8px;
-    border: 1px solid #CCC;
-    text-align: center;
-    font-size: 1rem;
-    outline: none;
-}
-
-#national-id-input:focus {
-    border-color: #2E7D32;
-}
-
-#national-id-form button {
-    width: 100%;
-    padding: 12px;
-    background-color: #1B5E20;
-    color: #FFF;
-    border: none;
-    border-radius: 8px;
-    font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.2s;
-}
-
-#national-id-form button:hover {
-    background-color: #2E7D32;
-}
-
-.error-msg {
-    color: #D32F2F;
-    font-size: 0.85rem;
-    margin-top: 8px;
-    min-height: 20px;
-}
-
-/* ---------------- صفحه دوم ---------------- */
-#page-invitation {
-    background-color: #f2efe4;
-    flex-direction: column;
-    align-items: center;
-    padding: 30px 15px;
-    position: relative;
-}
-
-.back-btn {
-    position: fixed;
-    top: 15px;
-    right: 15px;
-    z-index: 100;
-    background-color: #1B5E20;
-    color: #FFF;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 6px;
-    font-weight: bold;
-    cursor: pointer;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-}
-
-.invitation-layout-container {
-    max-width: 600px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-}
-
-.card-wrapper {
-    position: relative;
-    width: 100%;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-}
-
-.invitation-img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-/* جانمایی دقیق نام مهمان روی کارت */
+/* ---------------- استایل تنظیم نام روی کارت دعوت ---------------- */
 .guest-name-overlay {
     position: absolute;
-    top: 42.4%; /* تثبیت جایگاه عمودی دقیق روی خط نقطه‌چین */
+    top: 42.4%;
     right: 39%;
     width: 32%;
     transform: translateY(-50%);
-    font-size: 1.1vw; /* اندازه پایه Responsive */
+    font-size: 1.1vw;
     font-weight: bold;
     color: #222;
     white-space: nowrap;
@@ -227,9 +72,9 @@ body, html {
     pointer-events: none;
 }
 
-/* تنظیم اندازه فونت برای اسامی دارای بیش از ۲۰ کاراکتر */
+/* استایل مخصوص اسامی بالای ۲۰ کاراکتر */
 .guest-name-overlay.long-name {
-    font-size: 0.8vw; /* کاهش سایز فونت بدون تغییر موقعیت top/transform */
+    font-size: 0.8vw;
 }
 
 @media (min-width: 600px) {
@@ -239,52 +84,4 @@ body, html {
     .guest-name-overlay.long-name {
         font-size: 9.5px;
     }
-}
-
-/* بخش نقشه‌ها */
-.maps-section-wrapper {
-    display: flex;
-    width: 100%;
-    gap: 15px;
-}
-
-.map-column {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-}
-
-.map-title-box {
-    background-color: #1B5E20;
-    color: #FFF;
-    text-align: center;
-    padding: 6px 4px;
-    font-size: 0.75rem;
-    font-weight: bold;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.map-widget-box {
-    position: relative;
-    display: block;
-    width: 100%;
-    height: 140px;
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-.map-overlay-click {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: transparent;
-    z-index: 10;
 }
