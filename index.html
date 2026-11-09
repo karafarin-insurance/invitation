@@ -14,6 +14,13 @@
             <!-- لوگوی بیمه کارآفرین -->
             <img src="logo.png" alt="لوگو بیمه کارآفرین" class="top-logo">
             
+            <!-- باکس سبز پاستیلی با گوشه‌های گرد و متن همایش -->
+            <div class="event-info-box">
+                <h2>همایش سراسری مدیران و شبکه فروش</h2>
+                <p>اختتامیه پانزدهمین دوره جشنواره فروش بیمه‌های زندگی و اموال</p>
+                <span class="event-year">نیمه اول سال ۱۴۰۵</span>
+            </div>
+            
             <!-- ویدئو با قابلیت پخش خودکار و بی‌صدا -->
             <div class="video-wrapper">
                 <video id="intro-video" src="home-anim.mp4" autoplay muted playsinline></video>
@@ -21,7 +28,7 @@
 
             <!-- بخش ورود کد ملی (ابتدا مخفی) -->
             <div id="form-container" class="hidden-section">
-                <p class="instruction-text">میهمان گرامی، لطفا جهت مشاهده دعوت‌نامه، کدملی خود را وارد کنید:</p>
+                <p class="instruction-text">میهمان گرامی، لطفا جهت مشاهده دعوت‌نامه خود، کدملی خود را وارد کنید:</p>
                 
                 <form id="national-id-form" onsubmit="event.preventDefault(); checkNationalId();">
                     <input 
@@ -40,7 +47,7 @@
         </div>
     </div>
 
-    <!-- صفحه دوم: نمایش کارت دعوت و نقشه -->
+    <!-- صفحه دوم: نمایش کارت دعوت و نقشه ها -->
     <div id="page-invitation" class="page">
         <!-- دکمه بازگشت شناور در بالا سمت راست -->
         <button class="back-btn" onclick="goBackToHome()">بازگشت</button>
@@ -53,12 +60,12 @@
                 <div id="guest-name" class="guest-name-overlay"></div>
             </div>
 
-            <!-- مجموعه دو نقشه زیر کارت دعوت -->
-            <div class="maps-container-wrapper">
+            <!-- بخش نقشه ها و باکس های عنوان در کنار یکدیگر زیر کارت دعوت -->
+            <div class="maps-section-wrapper">
                 
                 <!-- نقشه سمت راست: هتل پارسیان خزر -->
-                <div class="map-item">
-                    <div class="map-title-tag">اقامت: هتل پارسیان خزر نمک آبرود</div>
+                <div class="map-column">
+                    <div class="map-title-box">اقامت: هتل پارسیان خزر نمک آبرود</div>
                     <a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x3f8c03a97cf2fb4d:0x4e799c698c8684f7?sa=X&ved=1t:8290&ictx=111" 
                        target="_blank" 
                        class="map-widget-box" 
@@ -77,14 +84,14 @@
                 </div>
 
                 <!-- نقشه سمت چپ: سالن پانوراما کلارآباد -->
-                <div class="map-item">
-                    <div class="map-title-tag">مراسم اختتامیه: سالن پانوراما کلارآباد</div>
-                    <a href="https://maps.app.goo.gl/Fe5kABaUBX2ZjjUN7" 
+                <div class="map-column">
+                    <div class="map-title-box">مراسم اختتامیه: سالن پانوراما کلارآباد</div>
+                    <a href="https://maps.app.goo.gl/5JHLXPwYdrquMDPL8" 
                        target="_blank" 
                        class="map-widget-box" 
                        title="مشاهده موقعیت سالن جشنواره در گوگل مپ">
                         <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3198.989081216081!2d51.26105937556494!3d36.69880027340964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f8c03f57f18ef15%3A0x810600d7708de403!2sPanorama%20Shopping%20Center!5e0!3m2!1sen!2s!4v1794172152317!5m2!1sen!2s" 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3235.0!2d51.3!3d36.6!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzbCsDM2JzAwLjAiTiA1McKwMTgnMDAuMCJF!5e0!3m2!1sen!2sfa!4v1650000000000!5m2!1sen!2sfa" 
                             width="100%" 
                             height="100%" 
                             style="border:0;" 

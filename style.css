@@ -11,10 +11,10 @@ body, html {
     width: 100%;
     min-height: 100vh;
     overflow-x: hidden;
-    background-color: #FFFFFF;
+    background-color: #f2efe4;
 }
 
-/* تفکیک کامل صفحات و جلوگیری از نمایش هم‌زمان */
+/* تفکیک کامل صفحات */
 .page {
     display: none !important;
     width: 100%;
@@ -31,7 +31,7 @@ body, html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 15px;
+    padding: 20px;
     position: relative;
 }
 
@@ -48,186 +48,160 @@ body, html {
     max-width: 140px;
     width: 100%;
     height: auto;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .event-info-box {
     background-color: #E8F5E9;
-    border: 1px solid #C8E6C9;
-    border-radius: 14px;
-    padding: 12px 16px;
+    border-radius: 16px;
+    padding: 16px 20px;
     width: 100%;
-    margin-bottom: 12px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.04);
+    margin-bottom: 20px;
+    border: 1px solid #C8E6C9;
 }
 
 .event-info-box h2 {
-    font-size: 0.95rem;
-    color: #1b5e20;
-    margin-bottom: 4px;
-    font-weight: bold;
+    font-size: 1.1rem;
+    color: #1B5E20;
+    font-weight: 700;
+    margin-bottom: 6px;
 }
 
 .event-info-box p {
-    font-size: 0.8rem;
-    color: #333333;
-    margin-bottom: 4px;
-    line-height: 1.4;
+    font-size: 0.9rem;
+    color: #2E7D32;
+    margin-bottom: 8px;
 }
 
 .event-year {
-    font-size: 0.75rem;
-    color: #2e7d32;
+    display: inline-block;
+    font-size: 0.85rem;
     font-weight: bold;
+    color: #388E3C;
+    background-color: #FFFFFF;
+    padding: 3px 12px;
+    border-radius: 12px;
 }
 
 .video-wrapper {
-    position: relative;
     width: 100%;
-    max-width: 480px;
-    border-radius: 10px;
+    border-radius: 16px;
     overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    margin-bottom: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
     background-color: #000;
 }
 
-#intro-video {
+.video-wrapper video {
     width: 100%;
-    height: auto;
     display: block;
 }
 
 .hidden-section {
-    opacity: 0;
-    transform: translateY(15px);
-    visibility: hidden;
-    transition: opacity 0.6s ease, transform 0.6s ease;
+    display: none;
     width: 100%;
 }
 
-.hidden-section.show {
-    opacity: 1;
-    transform: translateY(0);
-    visibility: visible;
+.fade-in {
+    display: block;
+    animation: fadeIn 0.8s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 .instruction-text {
     font-size: 0.9rem;
     color: #333;
-    margin-bottom: 10px;
-    line-height: 1.5;
+    margin-bottom: 12px;
 }
 
 #national-id-form {
     display: flex;
     flex-direction: column;
-    gap: 8px;
-    align-items: center;
+    gap: 10px;
     width: 100%;
 }
 
 #national-id-input {
     width: 100%;
-    max-width: 250px;
-    padding: 9px 12px;
-    font-size: 1.1rem;
-    text-align: center;
-    letter-spacing: 3px;
-    border: 2px solid #ccc;
+    padding: 12px;
     border-radius: 8px;
+    border: 1px solid #CCC;
+    text-align: center;
+    font-size: 1rem;
     outline: none;
-    transition: border-color 0.3s;
 }
 
 #national-id-input:focus {
-    border-color: #1b5e20;
+    border-color: #2E7D32;
 }
 
-button[type="submit"] {
-    background-color: #1b5e20;
-    color: white;
+#national-id-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #1B5E20;
+    color: #FFF;
     border: none;
-    padding: 9px 22px;
-    font-size: 0.9rem;
     border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.2s;
 }
 
-button[type="submit"]:hover {
-    background-color: #2e7d32;
+#national-id-form button:hover {
+    background-color: #2E7D32;
 }
 
 .error-msg {
-    color: #d32f2f;
-    margin-top: 6px;
+    color: #D32F2F;
     font-size: 0.85rem;
-    font-weight: bold;
-    min-height: 18px;
+    margin-top: 8px;
+    min-height: 20px;
 }
 
-/* ---------------- صفحه دوم (دعوت‌نامه) ---------------- */
+/* ---------------- صفحه دوم ---------------- */
 #page-invitation {
-    background-color: #F6E5C9;
+    background-color: #f2efe4;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     padding: 30px 15px;
     position: relative;
-    min-height: 100vh;
-}
-
-.invitation-layout-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    max-width: 500px;
-    width: 100%;
-    margin: 20px auto;
 }
 
 .back-btn {
     position: fixed;
-    top: 20px;
-    right: 20px;
-    background-color: #1b5e20;
-    color: white;
+    top: 15px;
+    right: 15px;
+    z-index: 100;
+    background-color: #1B5E20;
+    color: #FFF;
     border: none;
-    padding: 10px 22px;
-    font-size: 0.9rem;
+    padding: 8px 16px;
+    border-radius: 6px;
     font-weight: bold;
-    border-radius: 8px;
     cursor: pointer;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.25);
-    transition: background-color 0.3s, transform 0.2s;
-    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 
-.back-btn:hover {
-    background-color: #2e7d32;
-    transform: scale(1.05);
+.invitation-layout-container {
+    max-width: 600px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
 }
 
 .card-wrapper {
     position: relative;
     width: 100%;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-    border-radius: 12px;
+    border-radius: 8px;
     overflow: hidden;
-    animation: smoothSlideIn 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-}
-
-@keyframes smoothSlideIn {
-    0% {
-        opacity: 0;
-        transform: translateY(-30px) scale(0.95);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-    }
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
 }
 
 .invitation-img {
@@ -236,83 +210,73 @@ button[type="submit"]:hover {
     display: block;
 }
 
-/* جایگاه جدید و دقیق نام روی کارت دعوت */
+/* جانمایی دقیق نام مهمان روی کارت */
 .guest-name-overlay {
     position: absolute;
-    top: 44.0%; 
-    right: 48%; 
+    top: 42.4%; /* تثبیت جایگاه عمودی دقیق روی خط نقطه‌چین */
+    right: 39%;
+    width: 32%;
     transform: translateY(-50%);
-    font-size: clamp(0.75rem, 2.1vw, 1.05rem);
+    font-size: 1.1vw; /* اندازه پایه Responsive */
     font-weight: bold;
-    color: #111111;
+    color: #222;
     white-space: nowrap;
-    animation: nameGlowAppear 1.5s ease-in-out forwards;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: right;
+    pointer-events: none;
 }
 
-@keyframes nameGlowAppear {
-    0% {
-        opacity: 0;
-        filter: blur(8px);
-        text-shadow: 0 0 0px rgba(255, 215, 0, 0);
+/* تنظیم اندازه فونت برای اسامی دارای بیش از ۲۰ کاراکتر */
+.guest-name-overlay.long-name {
+    font-size: 0.8vw; /* کاهش سایز فونت بدون تغییر موقعیت top/transform */
+}
+
+@media (min-width: 600px) {
+    .guest-name-overlay {
+        font-size: 13.5px;
     }
-    50% {
-        opacity: 0.7;
-        filter: blur(2px);
-        text-shadow: 0 0 12px rgba(255, 215, 0, 0.8), 0 0 20px rgba(255, 165, 0, 0.6);
-    }
-    100% {
-        opacity: 1;
-        filter: blur(0px);
-        text-shadow: 0 0 4px rgba(255, 215, 0, 0.3);
+    .guest-name-overlay.long-name {
+        font-size: 9.5px;
     }
 }
 
-/* ساختار دو نقشه در کنار هم با عرض دقیق دعوتنامه */
-.maps-container-wrapper {
+/* بخش نقشه‌ها */
+.maps-section-wrapper {
     display: flex;
     width: 100%;
-    gap: 10px;
-    margin-top: 18px;
+    gap: 15px;
 }
 
-.map-item {
+.map-column {
     flex: 1;
     display: flex;
     flex-direction: column;
-    min-width: 0; /* جلوگیری از بهم ریختگی عرض flex */
 }
 
-.map-title-tag {
-    background-color: #1b5e20;
-    color: #ffffff;
+.map-title-box {
+    background-color: #1B5E20;
+    color: #FFF;
     text-align: center;
     padding: 6px 4px;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     font-weight: bold;
-    border-radius: 8px;
-    margin-bottom: 6px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
 .map-widget-box {
+    position: relative;
+    display: block;
     width: 100%;
     height: 140px;
-    border-radius: 12px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.2);
-    border: 3px solid #ffffff;
-    background-color: #fff;
-    transition: transform 0.3s, box-shadow 0.3s;
-    text-decoration: none;
-    display: block;
-    position: relative;
-}
-
-.map-widget-box:hover {
-    transform: scale(1.03);
-    box-shadow: 0 8px 22px rgba(0,0,0,0.3);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .map-overlay-click {
@@ -322,25 +286,5 @@ button[type="submit"]:hover {
     width: 100%;
     height: 100%;
     background: transparent;
-    cursor: pointer;
-}
-
-@media (max-width: 480px) {
-    .guest-name-overlay {
-        top: 44.0%;
-        right: 48.2%;
-    }
-    .back-btn {
-        top: 15px;
-        right: 15px;
-        padding: 8px 16px;
-        font-size: 0.8rem;
-    }
-    .map-widget-box {
-        height: 120px;
-    }
-    .map-title-tag {
-        font-size: 0.72rem;
-        padding: 5px 2px;
-    }
+    z-index: 10;
 }
