@@ -51,4 +51,15 @@ function checkNationalId() {
 }
 
 function showInvitation(name) {
-    const pageHome =
+    const pageHome = document.getElementById('page-home');
+    const pageInv = document.getElementById('page-invitation');
+    const nameOverlay = document.getElementById('guest-name');
+    
+    pageHome.classList.remove('active');
+    pageHome.style.display = 'none';
+    
+    nameOverlay.innerText = name;
+    
+    pageInv.classList.add('active');
+    pageInv.style.display = 'flex';
+}

@@ -52,36 +52,4 @@ body, html {
 }
 
 .event-info-box {
-    background-color: #E8F5E9;
-}
-
-/* ---------------- استایل تنظیم نام روی کارت دعوت ---------------- */
-.guest-name-overlay {
-    position: absolute;
-    top: 42.4%;
-    right: 39%;
-    width: 32%;
-    transform: translateY(-50%);
-    font-size: 1.1vw;
-    font-weight: bold;
-    color: #222;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    text-align: right;
-    pointer-events: none;
-}
-
-/* استایل مخصوص اسامی بالای ۲۰ کاراکتر */
-.guest-name-overlay.long-name {
-    font-size: 0.8vw;
-}
-
-@media (min-width: 600px) {
-    .guest-name-overlay {
-        font-size: 13.5px;
-    }
-    .guest-name-overlay.long-name {
-        font-size: 9.5px;
-    }
-}
+    background-color: #E8F5E9
